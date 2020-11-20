@@ -41,6 +41,7 @@ public class SpringConfig implements WebMvcConfigurer {
         return templateEngine;
     }
 
+    //eclipse wants to delete @Override. why? app doesn't work with this annotation 
     public void configureViewResolvers(ViewResolverRegistry registry) {
         ThymeleafViewResolver resolver = new ThymeleafViewResolver();
         resolver.setTemplateEngine(templateEngine());
